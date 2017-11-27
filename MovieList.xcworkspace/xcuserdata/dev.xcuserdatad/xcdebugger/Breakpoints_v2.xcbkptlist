@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieList/MovieListSource/MovieListScenes/MovieSearchScene/MovieSearchWorker.swift"
-            timestampString = "533476233.958965"
+            timestampString = "533491917.596083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -65,6 +65,181 @@
             endingLineNumber = "34"
             landmarkName = "presentSearchResult(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieList/MovieListSource/Services/MovieSearchReleamService.swift"
+            timestampString = "533493065.483433"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "fetchItemInRealm(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieList.MovieSearchReleamService.(fetchItemInRealm in _65775864B8F9279BAEBC57A85241B78E)(id: Swift.String) -&gt; Swift.Array&lt;MovieList.RealmMovieSearchItem&gt;"
+                  moduleName = "MovieList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieList/MovieListSource/Services/MovieSearchReleamService.swift"
+                  timestampString = "533491917.747094"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "473">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MovieList.RealmMovieSearchItem) -&gt; MovieList.RealmMovieSearchItem in MovieList.MovieSearchReleamService.(fetchItemInRealm in _65775864B8F9279BAEBC57A85241B78E)(id: Swift.String) -&gt; Swift.Array&lt;MovieList.RealmMovieSearchItem&gt;"
+                  moduleName = "MovieList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieList/MovieListSource/Services/MovieSearchReleamService.swift"
+                  timestampString = "533491917.751598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
+            timestampString = "533493065.48351"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "presentSearchResult(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
+            timestampString = "533493065.483886"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getSearchedMovie(_:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
+            timestampString = "533493065.484131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "executeRequest(request:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
+            timestampString = "533493065.484372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "testSearchInteractorSearchFuncAndSuggestions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
+            timestampString = "533493065.484604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "testSearchInteractorSearchFuncAndSuggestions()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
+                  timestampString = "533493066.425147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1244">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
+                  timestampString = "533493066.426641"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
+                  timestampString = "533493066.428122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

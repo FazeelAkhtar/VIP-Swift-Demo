@@ -17,7 +17,7 @@ protocol MovieSearchProtocol { // input from view{
 class MovieSearchInteractor {
   var output: MovieSearchPresenterOutputProtocol? // output presenter
   var  dbStore = MovieDBWorker(itemStore: MovieSearchReleamService())
-
+  var  searchApiWorker  = MovieSearchApiWorker()
 }
 
 
@@ -25,15 +25,13 @@ extension MovieSearchInteractor : MovieSearchProtocol {
     
     
     func loadFromSearchApi(request: MovieList.Search.Request){
-        let worker  = MovieSearchApiWorker()
-        worker.getSearchedMovie(request){ [weak self] result in
+        searchApiWorker.getSearchedMovie(request){ [weak self] result in
             let response = MovieList.Search.Response(searchedTxt: request.queryText , data : result.data , error : result.error )
             self?.output?.presentSearchResult(response)
         }
     }
     
     func loadFromDB(request: MovieList.Suggestion.Request){
-        
         dbStore.executeRequest(request: request) { result , error  in
                 let response = MovieList.Suggestion.Response(list: result , error: error )
                 output?.presentSavedSearchSuggestion(response)

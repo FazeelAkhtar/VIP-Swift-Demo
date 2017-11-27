@@ -50,6 +50,11 @@
 		D75001481FCC31A10072F296 /* TableView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75001291FCC31A10072F296 /* TableView+Extentions.swift */; };
 		D75001491FCC31A10072F296 /* UITableViewCell+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D750012A1FCC31A10072F296 /* UITableViewCell+Extentions.swift */; };
 		D750014A1FCC31A10072F296 /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D750012B1FCC31A10072F296 /* UIView+Extentions.swift */; };
+		D75009161FCC55DF003F3520 /* MovieListTestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75009151FCC55DF003F3520 /* MovieListTestModels.swift */; };
+		D75009181FCC586D003F3520 /* MovieDBWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75009171FCC586D003F3520 /* MovieDBWorkerTest.swift */; };
+		D750091A1FCC63E3003F3520 /* MovieSearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75009191FCC63E3003F3520 /* MovieSearchInteractorTest.swift */; };
+		D750091C1FCC63F5003F3520 /* MovieSearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D750091B1FCC63F5003F3520 /* MovieSearchPresenterTest.swift */; };
+		D750091E1FCC6407003F3520 /* MovieSearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D750091D1FCC6407003F3520 /* MovieSearchViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,11 @@
 		D75001291FCC31A10072F296 /* TableView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Extentions.swift"; sourceTree = "<group>"; };
 		D750012A1FCC31A10072F296 /* UITableViewCell+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extentions.swift"; sourceTree = "<group>"; };
 		D750012B1FCC31A10072F296 /* UIView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		D75009151FCC55DF003F3520 /* MovieListTestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTestModels.swift; sourceTree = "<group>"; };
+		D75009171FCC586D003F3520 /* MovieDBWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBWorkerTest.swift; sourceTree = "<group>"; };
+		D75009191FCC63E3003F3520 /* MovieSearchInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractorTest.swift; sourceTree = "<group>"; };
+		D750091B1FCC63F5003F3520 /* MovieSearchPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchPresenterTest.swift; sourceTree = "<group>"; };
+		D750091D1FCC6407003F3520 /* MovieSearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,11 @@
 				D75000F21FCC20850072F296 /* MovieListModelTest.swift */,
 				D75000F31FCC20850072F296 /* MovieListTests.swift */,
 				D75000F71FCC20A80072F296 /* MovieTestUtill.swift */,
+				D75009151FCC55DF003F3520 /* MovieListTestModels.swift */,
+				D75009171FCC586D003F3520 /* MovieDBWorkerTest.swift */,
+				D75009191FCC63E3003F3520 /* MovieSearchInteractorTest.swift */,
+				D750091D1FCC6407003F3520 /* MovieSearchViewControllerTest.swift */,
+				D750091B1FCC63F5003F3520 /* MovieSearchPresenterTest.swift */,
 			);
 			path = MovieListTests;
 			sourceTree = "<group>";
@@ -570,9 +585,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75009161FCC55DF003F3520 /* MovieListTestModels.swift in Sources */,
 				D75000FD1FCC24F20072F296 /* MovieListModelTest.swift in Sources */,
 				D75000E21FCC15F00072F296 /* MovieListTests.swift in Sources */,
+				D750091E1FCC6407003F3520 /* MovieSearchViewControllerTest.swift in Sources */,
 				D75000FE1FCC24F20072F296 /* MovieTestUtill.swift in Sources */,
+				D750091C1FCC63F5003F3520 /* MovieSearchPresenterTest.swift in Sources */,
+				D75009181FCC586D003F3520 /* MovieDBWorkerTest.swift in Sources */,
+				D750091A1FCC63E3003F3520 /* MovieSearchInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

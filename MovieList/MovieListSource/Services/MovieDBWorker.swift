@@ -98,21 +98,19 @@ class MovieDBWorker {
         })
     }
     
-}
-
-
-extension MovieDBWorker {
- 
+    
     func executeRequest (request : MovieList.Suggestion.Request  , callBack : MovieStoreAllItemWithErrorCallBack){
         switch request.type {
-            case .add(let name ):
-                self.createItem(item: MovieSuggestionViewModel(name)) { error in
-                    guard  error != nil else { return callBack([] , error) }
-                    callBack( [] , nil )
-                }
-                break
-            case .getAll :
-                self.fetchAllItems(completionHandler: callBack) ; break
+        case .add(let name ):
+            self.createItem(item: MovieSuggestionViewModel(name)) { error in
+                guard  error != nil else { return callBack([] , error) }
+                callBack( [] , nil )
+            }
+            break
+        case .getAll :
+            self.fetchAllItems(completionHandler: callBack) ; break
         }
     }
 }
+
+

@@ -97,7 +97,9 @@ extension MovieSearchReleamService {
     
     private func fetchItemInRealm(id: String) -> [RealmMovieSearchItem]{
         let realm = try! Realm()
-        let itemsArray = realm.objects(RealmMovieSearchItem.self).filter("id = \(id)")
+        let itemsArray = realm.objects(RealmMovieSearchItem.self).filter { dbItem -> Bool in
+            return String (dbItem.id) == String(id)
+        }
         return itemsArray.map{$0 as RealmMovieSearchItem}
     }
 
