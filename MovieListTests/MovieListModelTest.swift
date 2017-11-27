@@ -44,8 +44,8 @@ class MovieListTests: XCTestCase {
     var movieListModel : ApiMoviesModelTest? = nil
     override func setUp() {
         super.setUp()
-        let movieModel = MovieTestUtill.readTestApiJsonModel(fileName: <#T##String#>)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let movieModel = MovieTestUtill.readTestApiJsonModel(fileName: "TestApiListJson")
+        let movieDetailModel = MovieTestUtill.readTestMovieJsonModel(fileName: "TestApiMovieDetailMode")
     }
     
     
