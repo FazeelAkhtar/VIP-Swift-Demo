@@ -15,6 +15,7 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     var output: MovieSearchProtocol?
     var router: MovieSearchRouter?
     var searchedQuery : String?
+    var isAlreadySearching : Bool = false
     
 
     
@@ -72,6 +73,7 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
   
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text  else {return }
+        guard !isAlreadySearching else { return }
         searchedQuery  = text
         self.executeSearchQuery(request: MovieList.Search.Request(queryText: text, page: 0) )
     }

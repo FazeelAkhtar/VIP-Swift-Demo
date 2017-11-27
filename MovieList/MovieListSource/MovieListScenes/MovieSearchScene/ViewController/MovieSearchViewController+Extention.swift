@@ -33,6 +33,7 @@ extension MovieSearchViewController : MovieSearchControllerOutput {
         }else{
             UIAlertController.displayAlert(parentController: self, displayMsg: "No Search result found")
         }
+        isAlreadySearching = false
     }
     
     func displaySuggestions(viewModel: MovieList.Suggestion.ViewModel){
@@ -41,6 +42,7 @@ extension MovieSearchViewController : MovieSearchControllerOutput {
     }
     
     func displaySearchedResultError(viewModel: MovieList.Search.Response){
+        isAlreadySearching = false
         UIAlertController.displayAlert(parentController: self, displayMsg: "Unable to display result.Please try again")
     }
 }
@@ -49,6 +51,7 @@ extension MovieSearchViewController : MovieSearchControllerOutput {
 extension MovieSearchViewController : MovieSearchControllerInput {
     
     func executeSearchQuery(request: MovieList.Search.Request){
+        isAlreadySearching = true
         output?.loadFromSearchApi(request:  request)
     }
     
