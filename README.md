@@ -9,9 +9,13 @@ https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf
 
 Third Party libs Used as Pod :
 
-    pod 'Alamofire' .  : For network requests
-    pod 'Kingfisher'   : For image caching and Requests
-    pod 'Cartography'  : For Autolayouts in code
-    pod 'RealmSwift'   : For DB Relation Framework
+    pod 'Alamofire' .  : For network requests 
+   
+    pod 'Kingfisher'   : For image caching and Requests 
+   
+    pod 'Cartography'  : For Autolayouts in code 
+   
+    pod 'RealmSwift'   : For DB Relation Framework 
+   
 
 
