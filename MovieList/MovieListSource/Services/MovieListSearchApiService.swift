@@ -24,6 +24,12 @@ struct MovieApiSearchResult  : MovieApiResult{
 
 
 
+/**
+    MovieListSearchApiService
+    Lowe level Api Calls with request and Passs As MovieApiSearchResult
+ */
+
+
 typealias searchApiCallback  =  (MovieApiResult) ->  Void
 
 class MovieListSearchApiService  {

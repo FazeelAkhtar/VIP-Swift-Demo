@@ -13,7 +13,7 @@ class MovieTestUtill {
  
     class func readTestApiJsonModel () -> ApiMoviesModelTest? {
         do {
-            let path = Bundle.main.path(forResource: "", ofType:"json")!
+            let path = Bundle.main.path(forResource:"TestApiListJson", ofType:"json")!
             let xmlData = try Data(contentsOf : URL(fileURLWithPath: path))
             return   (try?  JSONDecoder().decode( ApiMoviesModelTest.self , from : xmlData)) ?? nil
         }
@@ -26,9 +26,9 @@ class MovieTestUtill {
     
     class func readTestMovieJsonModel () -> ApiMovieItemModelTest? {
         do {
-            let path = Bundle.main.path(forResource: "", ofType:"json")!
+            let path = Bundle.main.path(forResource: "TestApiMovieDetailMode", ofType:"json")!
             let xmlData = try Data(contentsOf : URL(fileURLWithPath: path))
-            return   (try?  JSONDecoder().decode( ApiMoviesModelTest.self , from : xmlData)) ?? nil
+            return   (try?  JSONDecoder().decode( ApiMovieItemModelTest.self , from : xmlData)) ?? nil
         }
         catch let error  {
             print(error)

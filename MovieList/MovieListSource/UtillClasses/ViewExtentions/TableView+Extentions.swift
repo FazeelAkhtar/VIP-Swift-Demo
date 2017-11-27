@@ -2,12 +2,18 @@
 //  TableView+Extentions.swift
 //  TestApp
 //
-//  Created by Dev on 11/22/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
 import UIKit
 
+
+
+/**
+ ReusableCellHosting Protocol
+ Genric Cell for registration for tableview
+ */
 
 
 protocol ReusableCellHosting {
@@ -18,7 +24,11 @@ protocol ReusableCellHosting {
 }
 
 extension UITableView  : ReusableCellHosting {
-    
+    /**
+        @param : Generic Cell type
+        @result : None
+        Genric Cell for registration for tableview
+    */
     
     func register<T>(cell: T.Type) where T: UITableViewCell {
         register(cell.nib, forCellReuseIdentifier: cell.reuseIdentifier)

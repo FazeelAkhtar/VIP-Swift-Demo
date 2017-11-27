@@ -2,7 +2,7 @@
 //  MovieSearchReleamService.swift
 //  TestApp
 //
-//  Created by Dev on 11/26/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
@@ -10,6 +10,10 @@ import Foundation
 import RealmSwift
 
 
+/**
+    MovieSearchReleamService Protocol
+    This Class is lower level implementation of Releam DB Object Mapping , which is used to presist objs and Search suggestion in DB
+ */
 
 class MovieSearchReleamService: MovieSuggestionStoreProtocol {
     

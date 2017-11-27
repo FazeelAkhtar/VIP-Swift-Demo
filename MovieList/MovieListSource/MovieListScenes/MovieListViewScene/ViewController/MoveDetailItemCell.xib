@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jv1-bG-ZBh">
-                        <rect key="frame" x="20" y="11" width="374" height="328"/>
+                        <rect key="frame" x="0.0" y="11" width="0.0" height="328"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-4R-I8d">
                                 <rect key="frame" x="0.0" y="0.0" width="201" height="45"/>
@@ -33,7 +33,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QW3-v7-gIi">
-                                        <rect key="frame" x="55" y="0.0" width="146" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title of this label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-Ip-6Pu">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="25.5"/>
@@ -52,7 +52,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="746" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh3-rB-MNb">
-                                <rect key="frame" x="0.0" y="53" width="366" height="275"/>
+                                <rect key="frame" x="0.0" y="53" width="0.0" height="275"/>
                                 <string key="text">Label this Label this Label this Label this Label this Label this Label this Label this Label this Label this Label this Label this</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

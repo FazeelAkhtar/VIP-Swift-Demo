@@ -2,7 +2,7 @@
 //  UITableViewCell+Extentions.swift
 //  TestApp
 //
-//  Created by Dev on 11/22/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
@@ -13,6 +13,12 @@ protocol ReusableCell {
     static var reuseIdentifier: String { get }
 }
 
+
+
+/**
+ @param : ConfigurableCell
+ Genric Cell for config funtion 
+ */
 
 protocol ConfigurableCell : ReusableCell {
     associatedtype T

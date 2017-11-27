@@ -2,7 +2,7 @@
 //  ViewModels.swift
 //  TestApp
 //
-//  Created by Dev on 11/22/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
@@ -25,6 +25,10 @@ struct MovieSuggestionViewModel : BaseItemModel {
     }
 }
 
+/**
+    MovieItemModel Base Model for ViewModels
+    This model contains properties needed for display
+ */
 
 
 protocol MovieItemModel : BaseItemModel {
@@ -34,6 +38,14 @@ protocol MovieItemModel : BaseItemModel {
     var imageUrl: String { get }
     
 }
+
+
+
+
+/**
+    MovieItemViewModel Movie Item View Model
+    This model is needed for converting Json Api into Model Types used for Displaying data for List Search View.
+ */
 
 
 struct MovieItemViewModel : MovieItemModel  {
@@ -51,6 +63,11 @@ struct MovieItemViewModel : MovieItemModel  {
     }
 }
 
+
+/**
+    MovieItemViewModel Movie Item View Model
+    This model is needed for Pagination of Search TableView to load next pages
+ */
 
 
 struct MovieListViewModel {

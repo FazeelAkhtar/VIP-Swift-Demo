@@ -2,7 +2,7 @@
 //  MovieDBWorker.swift
 //  TestApp
 //
-//  Created by Dev on 11/24/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
@@ -13,12 +13,23 @@ import Foundation
 
 
 
-typealias MovieStoreAllItemWithErrorCallBack =  (_ itemArray:[MovieSuggestionViewModel] , _ error: MovieSuggestionStoreError?) 
+/**
+    Typealias is used for DB worker callback.
+ */
+
+
+typealias MovieStoreAllItemWithErrorCallBack =  (_ itemArray:[MovieSuggestionViewModel] , _ error: MovieSuggestionStoreError?)
     -> Void
 typealias MovieStoreAllItemCallBack =  (_ itemArray:[MovieSuggestionViewModel]) -> Void
 typealias MovieStoreItemCallBack  = (_ item:MovieSuggestionViewModel?, _ error: MovieSuggestionStoreError?) -> Void
 typealias MovieStoreErrorCallBack  = (_ error: MovieSuggestionStoreError?) -> Void
 
+
+
+/**
+    MovieSuggestionStoreProtocol Protocol
+    This Protocol is needed for more abstract DB queries to get data from low level Databse . which can be pluged and changed when needed
+ */
 
 
 protocol MovieSuggestionStoreProtocol{
@@ -40,6 +51,10 @@ enum MovieSuggestionStoreError: Error{
 
 
 
+/**
+    MovieDBWorker
+    This Class is needed for more implement lower level queries to get data from low level Databse . which can be pluged and changed when needed
+ */
 
 class MovieDBWorker {
     

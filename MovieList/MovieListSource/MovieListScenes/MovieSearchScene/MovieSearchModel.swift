@@ -2,7 +2,7 @@
 //  MovieSearchModel.swift
 //  TestApp
 //
-//  Created by Dev on 11/23/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
@@ -73,6 +73,10 @@ enum MovieList {
 
 extension Data {
     
+    /**
+     getResponseModel
+     Covert Data to Model Objecvts by using Swift decodable protocol
+     */
     var getResponseModel : ApiMoviesModel? {
         return   (try?  JSONDecoder().decode( ApiMoviesModel.self , from : self)) ?? nil
     }

@@ -2,18 +2,22 @@
 //  MovieListModel.swift
 //  TestApp
 //
-//  Created by Dev on 11/24/17.
+//  Created by Dev on 11/27/17.
 //  Copyright © 2017 Fazeel. All rights reserved.
 //
 
 
+@testable import MovieList
+
 import XCTest
+import Foundation
+
 
 struct ApiMoviesModelTest : Decodable {
     let page : Int
     let total_results : Int
-    let total_pages : Int
-    let results : [ApiMovieItemModel]
+    let totalpages : Int
+    let results : [ApiMovieItemModelTest]
 }
 
 
@@ -41,8 +45,8 @@ class MovieListTests: XCTestCase {
     var movieListModel : ApiMoviesModelTest? = nil
     override func setUp() {
         super.setUp()
-        let movieModel = MovieTestUtill.readTestApiJsonModel(fileName: "TestApiListJson")
-        let movieDetailModel = MovieTestUtill.readTestMovieJsonModel(fileName: "TestApiMovieDetailMode")
+        let movieModel = MovieTestUtill.readTestApiJsonModel()
+        let movieDetailModel = MovieTestUtill.readTestMovieJsonModel()
     }
     
     
