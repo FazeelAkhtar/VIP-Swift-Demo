@@ -69,8 +69,6 @@ class MovieSearchInteractorTest: XCTestCase {
                     output?.presentSavedSearchSuggestion(response)
                 }
          }
-        
-        
     }
     
     

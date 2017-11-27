@@ -12,28 +12,32 @@ import Foundation
 class MovieTestUtill {
  
     class func readTestApiJsonModel () -> ApiMoviesModelTest? {
+        var resModel : ApiMoviesModelTest? = nil
         do {
-            let path = Bundle.main.path(forResource:"TestApiListJson", ofType:"json")!
-            let xmlData = try Data(contentsOf : URL(fileURLWithPath: path))
-            return   (try?  JSONDecoder().decode( ApiMoviesModelTest.self , from : xmlData)) ?? nil
+            if let filePath = Bundle.main.url(forResource: "TestApiListJson", withExtension: "json"){
+                let xmlData = try Data(contentsOf :  filePath)
+                resModel =    try  JSONDecoder().decode( ApiMoviesModelTest.self , from : xmlData)
+            }
         }
         catch let error  {
             print(error)
-            return nil
         }
+       return resModel
     }
     
     
     class func readTestMovieJsonModel () -> ApiMovieItemModelTest? {
         do {
-            let path = Bundle.main.path(forResource: "TestApiMovieDetailMode", ofType:"json")!
-            let xmlData = try Data(contentsOf : URL(fileURLWithPath: path))
-            return   (try?  JSONDecoder().decode( ApiMovieItemModelTest.self , from : xmlData)) ?? nil
+            if let filePath = Bundle.main.url(forResource: "TestApiMovieDetailMode", withExtension: "json"){
+                let data = try Data(contentsOf : filePath)
+                return   (try?  JSONDecoder().decode( ApiMovieItemModelTest.self , from : data)) ?? nil
+            }
         }
         catch let error  {
             print(error)
             return nil
         }
+        return nil
     }
     
     

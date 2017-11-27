@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieList/MovieListSource/Services/MovieSearchReleamService.swift"
-            timestampString = "533493065.483433"
+            timestampString = "533497018.637123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -118,128 +118,143 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
-            timestampString = "533493065.48351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "presentSearchResult(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
-            timestampString = "533493065.483886"
+            filePath = "MovieListTests/MovieListModelTest.swift"
+            timestampString = "533495907.589576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "getSearchedMovie(_:callBack:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
-            timestampString = "533493065.484131"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "executeRequest(request:callBack:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
-            timestampString = "533493065.484372"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "testSearchInteractorSearchFuncAndSuggestions()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieListTests/MovieSearchInteractorTest.swift"
-            timestampString = "533493065.484604"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "testSearchInteractorSearchFuncAndSuggestions()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testMovieListModel_TotalPage_Pass()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  symbolName = "MovieListTests.MovieListTests.testMovieListModel_TotalPage_Pass() -&gt; ()"
                   moduleName = "MovieListTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
-                  timestampString = "533493066.425147"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieListModelTest.swift"
+                  timestampString = "533497019.554418"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1244">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in MovieListTests.MovieListTests.testMovieListModel_TotalPage_Pass() -&gt; ()"
                   moduleName = "MovieListTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
-                  timestampString = "533493066.426641"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieListModelTest.swift"
+                  timestampString = "533497019.555976"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "14">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in MovieListTests.MovieSearchInteractorTest.testSearchInteractorSearchFuncAndSuggestions() -&gt; ()"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in MovieListTests.MovieListTests.testMovieListModel_TotalPage_Pass() -&gt; ()"
                   moduleName = "MovieListTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieSearchInteractorTest.swift"
-                  timestampString = "533493066.428122"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/MovieListModelTest.swift"
+                  timestampString = "533497019.557539"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/TestMovieItemModel.swift"
+            timestampString = "533496777.616052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "testMovieItemModel_Overview_Pass()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieListTests.TestMovieItemModel.testMovieItemModel_Overview_Pass() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/TestMovieItemModel.swift"
+                  timestampString = "533497019.559997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in MovieListTests.TestMovieItemModel.testMovieItemModel_Overview_Pass() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/TestMovieItemModel.swift"
+                  timestampString = "533497019.561403"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in MovieListTests.TestMovieItemModel.testMovieItemModel_Overview_Pass() -&gt; ()"
+                  moduleName = "MovieListTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dev/Dropbox/files/MovieList/MovieList/MovieListTests/TestMovieItemModel.swift"
+                  timestampString = "533497019.56283"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieListTests/MovieDBWorkerTest.swift"
+            timestampString = "533497018.637206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "testDbItemExist()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -20,7 +20,7 @@ class TestRealmMovieSearchItem: Object {
 struct ApiMoviesModelTest : Decodable {
     let page : Int
     let total_results : Int
-    let totalpages : Int
+    let total_pages : Int
     let results : [ApiMovieItemModelTest]
 }
 

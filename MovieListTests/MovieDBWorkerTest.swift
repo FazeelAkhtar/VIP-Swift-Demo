@@ -19,6 +19,10 @@ class TestMovieDBWorker : MovieDBWorker {
         self.itemStore.fetchItem(id: id, completionHandler: callback)
     }
     
+    func deleteItemWithName (id : String ){
+        self.itemStore.deleteItem(id: id ){ result in 
+        }
+    }
 }
 
 class MovieDBWorkerTest: XCTestCase {
@@ -51,6 +55,7 @@ extension MovieDBWorkerTest {
             guard error == nil else { return XCTAssertNotNil(  nil , "Item not Present") }
             XCTAssertTrue( result?.title == "Test1"  , "Item is not Present")
         })
+      self.testDbStore.deleteItemWithName(id: "Test1")
     }
 }
 
