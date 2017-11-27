@@ -16,7 +16,6 @@
 		D75000D71FCC15F00072F296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75000D51FCC15F00072F296 /* LaunchScreen.storyboard */; };
 		D75000E21FCC15F00072F296 /* MovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75000E11FCC15F00072F296 /* MovieListTests.swift */; };
 		D75000EF1FCC20670072F296 /* MovieListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75000EE1FCC20670072F296 /* MovieListDataModel.swift */; };
-		D75000F41FCC20850072F296 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75000F11FCC20850072F296 /* Info.plist */; };
 		D75000FD1FCC24F20072F296 /* MovieListModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75000F21FCC20850072F296 /* MovieListModelTest.swift */; };
 		D75000FE1FCC24F20072F296 /* MovieTestUtill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75000F71FCC20A80072F296 /* MovieTestUtill.swift */; };
 		D75001011FCC27420072F296 /* TestApiListJson.json in Resources */ = {isa = PBXBuildFile; fileRef = D75000FF1FCC27420072F296 /* TestApiListJson.json */; };
@@ -51,7 +50,6 @@
 		D75000E11FCC15F00072F296 /* MovieListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTests.swift; sourceTree = "<group>"; };
 		D75000E31FCC15F00072F296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75000EE1FCC20670072F296 /* MovieListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListDataModel.swift; sourceTree = "<group>"; };
-		D75000F11FCC20850072F296 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75000F21FCC20850072F296 /* MovieListModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListModelTest.swift; sourceTree = "<group>"; };
 		D75000F31FCC20850072F296 /* MovieListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTests.swift; sourceTree = "<group>"; };
 		D75000F71FCC20A80072F296 /* MovieTestUtill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTestUtill.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			children = (
 				D75000FF1FCC27420072F296 /* TestApiListJson.json */,
 				D75001001FCC27420072F296 /* TestApiMovieDetailMode.json */,
-				D75000F11FCC20850072F296 /* Info.plist */,
 				D75000F21FCC20850072F296 /* MovieListModelTest.swift */,
 				D75000F31FCC20850072F296 /* MovieListTests.swift */,
 				D75000F71FCC20A80072F296 /* MovieTestUtill.swift */,
@@ -264,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75000F41FCC20850072F296 /* Info.plist in Resources */,
 				D75000D71FCC15F00072F296 /* LaunchScreen.storyboard in Resources */,
 				D75000D41FCC15F00072F296 /* Assets.xcassets in Resources */,
 				D75000D21FCC15F00072F296 /* Main.storyboard in Resources */,

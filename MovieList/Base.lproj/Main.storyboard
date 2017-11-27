@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Startup View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="dLm-Mc-hJB">
             <objects>
-                <viewController id="E9d-CC-jge" customClass="StartupViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E9d-CC-jge" customClass="StartViewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svE-KW-uHY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <state key="normal" title="Hit me up"/>
                                 <connections>
-                                    <action selector="buttonStartPressedWithId:" destination="E9d-CC-jge" eventType="touchUpInside" id="L1j-Qh-ytj"/>
+                                    <action selector="buttonStartPressedWithId:" destination="E9d-CC-jge" eventType="touchUpInside" id="cJf-zw-R5n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,7 +37,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="w8X-Wl-pr1"/>
                     <connections>
-                        <outlet property="startButton" destination="zpD-GP-MrY" id="bh1-Dy-KKW"/>
+                        <outlet property="startButton" destination="zpD-GP-MrY" id="UX7-xq-7TC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLk-Zp-KMc" userLabel="First Responder" sceneMemberID="firstResponder"/>

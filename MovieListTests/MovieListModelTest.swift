@@ -8,9 +8,6 @@
 
 
 import XCTest
-@testable import MovieList
-
-
 
 struct ApiMoviesModelTest : Decodable {
     let page : Int

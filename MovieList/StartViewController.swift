@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     
     @IBOutlet weak var startButton      : UIButton!
-
     
     @IBAction  func buttonStartPressed( id : Any){
         let detailView1 = MovieSearchViewController(with:   [])

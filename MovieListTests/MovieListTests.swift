@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import MovieList
 
-class MovieListTests: XCTestCase {
+
+class MovieListMainTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
