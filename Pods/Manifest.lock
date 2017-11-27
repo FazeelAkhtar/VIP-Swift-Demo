@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Cartography (3.0.1)
+  - Kingfisher (4.3.1)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cartography
+  - Kingfisher
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+
+PODFILE CHECKSUM: 5321b6227e8826e7e766d0c5547ef51866079593
+
+COCOAPODS: 1.2.0.beta.1
