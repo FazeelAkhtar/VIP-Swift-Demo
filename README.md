@@ -1,5 +1,7 @@
 # MovieList
-Code example using Clean Swift architecture and TDD
+
+Idea is to show how i will use a better iOS Pattrent to solve this problem in as less time as possible.
+Code is done using Clean Swift architecture and TDD
 
 Clean Swift (a.k.a VIP) is Uncle Bob’s Clean Architecture applied to iOS and Mac projects.
 
