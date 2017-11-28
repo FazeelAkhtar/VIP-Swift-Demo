@@ -12,9 +12,33 @@ import Cartography
 
 class MovieSearchViewController   : BaseViewController < MovieSuggestionViewModel , MovieSearchCell > ,  UISearchBarDelegate {
 
+    
+    /**
+        output :  Display and update protocol
+     */
+
+    
     var output: MovieSearchProtocol?
+
+    
+    /**
+        router :  For View Navigation
+     */
+
+    
     var router: MovieSearchRouter?
+    
+    /**
+        searchedQuery :  searched Query
+     */
+    
     var searchedQuery : String?
+    
+    
+    /**
+        isAlreadySearching :  to stop multiple searching if in progress
+     */
+    
     var isAlreadySearching : Bool = false
     
 
@@ -41,15 +65,17 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     }
     
     
+    /**
+        tableData    :   Passed data by init if needed
+     */
+    
     init( with  tableData :  [Any]) {
         super.init()
         self.tableData = tableData
-        
     }
     
     
     override  func viewDidLoad() {
-        
         super.viewDidLoad()
         self.searchBar.text = ""
         MovieSearchViewConfigurator.sharedInstance.configure(viewController: self) //configure output/input
@@ -58,8 +84,11 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     
  
 
- 
-    
+    /**
+     
+     didSelectRowAt    :   load saved query search
+     
+     */
     
    override   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard self.tableData.count >= indexPath.row else { return }
@@ -70,6 +99,11 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     }
     
     
+    /**
+     
+        searchBarSearchButtonClicked    :   search bar query search button pressed
+     
+     */
   
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text  else {return }

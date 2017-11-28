@@ -18,6 +18,16 @@ import RealmSwift
 class MovieSearchReleamService: MovieSuggestionStoreProtocol {
     
     let EMPTY_ARRAY = 0
+    
+    
+    
+    
+    /**
+     fetchAllItems : Fetch all items from DB
+     */
+
+    
+    
 
     func fetchAllItems(completionHandler:  MovieStoreAllItemWithErrorCallBack) {
         let realm = try! Realm()
@@ -30,6 +40,11 @@ class MovieSearchReleamService: MovieSuggestionStoreProtocol {
         }
     }
     
+    
+    /**
+        fetchItem : Fetch  items from DB with name
+     */
+
     func fetchItem(id: String , completionHandler: MovieStoreItemCallBack){
         let itemsArray = fetchItemInRealm(id: id)
         if itemsArray.count == EMPTY_ARRAY{
@@ -39,6 +54,12 @@ class MovieSearchReleamService: MovieSuggestionStoreProtocol {
             completionHandler(itemsArray.first?.toItem(), nil)
         }
     }
+    
+    
+    /**
+        deleteItem : delee  items from DB with name
+     */
+
     
     func deleteItem(id: String, completionHandler: MovieStoreErrorCallBack ){
        
@@ -106,6 +127,12 @@ extension MovieSearchReleamService {
 }
 
 
+
+
+
+/**
+    RealmMovieSearchItem : convert DB item to ViewModel item
+ */
 
 
 extension RealmMovieSearchItem {

@@ -11,9 +11,13 @@ import UIKit
 
 
 
+/**
+ MovieListViewConfigurator   :  This will setup outputs , inputs and worker and router protocols
+ 
+ */
+
 
 class MovieSearchViewConfigurator{
-    // MARK: Object lifecycle
     
     class var sharedInstance: MovieSearchViewConfigurator{
         struct Static {

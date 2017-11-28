@@ -58,6 +58,12 @@ class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewContr
     
     
     
+    /**
+        Table view Delegates    :   unable to make extention due to swift generic constraint
+     
+     */
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -92,6 +98,14 @@ class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewContr
 
 extension BaseViewController {
   
+    
+    
+    /**
+     
+        ddFooterLoadingAnimatio    :   Loading next Page Animation at footer
+     
+     */
+    
     func addFooterLoadingAnimation(){
         let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))

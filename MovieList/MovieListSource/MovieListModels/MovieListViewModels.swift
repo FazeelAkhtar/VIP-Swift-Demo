@@ -27,7 +27,7 @@ struct MovieSuggestionViewModel : BaseItemModel {
 
 /**
     MovieItemModel Base Model for ViewModels
-    This model contains properties needed for display
+    This model contains properties needed for display for search List Screen
  */
 
 
@@ -67,6 +67,8 @@ struct MovieItemViewModel : MovieItemModel  {
 /**
     MovieItemViewModel Movie Item View Model
     This model is needed for Pagination of Search TableView to load next pages
+    Contains Current Page , Next page and search Query String
+ 
  */
 
 

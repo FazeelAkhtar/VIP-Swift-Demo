@@ -14,17 +14,17 @@ import UIKit
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol MovieSearchDataPassing
-{
- // var dataStore: MovieSearchDataStore? { get }
-}
 
-class MovieSearchRouter : NSObject, MovieSearchRoutingLogic //, MovieSearchDataPassing
+/**
+    MovieSearchRouter   :  Router is used to pass data from view to view
+ 
+ */
+
+
+class MovieSearchRouter : NSObject, MovieSearchRoutingLogic
 {
   weak var viewController: MovieSearchViewController?
-  var dataStore: MovieSearchDataPassing?
   
-    
     func routeToSearchListView (viewModel: MovieList.Search.ViewModel){
         let detailView = MovieListViewController(with: MovieListViewModel( viewModel))
         viewController?.navigationController?.show(detailView, sender: nil)

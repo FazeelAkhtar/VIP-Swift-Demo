@@ -9,6 +9,13 @@
 import Foundation
 import RealmSwift
 
+
+/**
+    Create Releam Model For Searched Item
+    @param id = title
+ */
+
+
 class RealmMovieSearchItem: Object {
     @objc dynamic var id = ""
     override class func primaryKey() -> String? {
@@ -17,6 +24,10 @@ class RealmMovieSearchItem: Object {
 }
 
 
+/**
+    Create Api Movie List Model , automatically decoded to Model from Json Swift 4 Decodable.
+ */
+
 struct ApiMoviesModel : Decodable {
     let page : Int
     let total_results : Int
@@ -24,6 +35,10 @@ struct ApiMoviesModel : Decodable {
     let results : [ApiMovieItemModel]
 }
 
+
+/**
+    Create Api Movie Item Detail Model , automatically decoded to Model from Json Swift 4 Decodable.
+ */
 
 
 struct  ApiMovieItemModel : Decodable {

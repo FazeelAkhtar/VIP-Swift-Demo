@@ -19,6 +19,13 @@ class MovieListViewPresenter: MovieListPresenterProtocol
 {
    var outPut: MovieListPagingResultProtocol?
   
+    /**
+        displayNextPageSearchedMovies   :  Display Error and result from Next Page loading
+        Also convert response into ViewModel , which need to be displayed on UIView
+        @param :   MoviesDisplayList.NextPage.Request which contains current page , search query
+     
+     */
+    
   
   func displayNextPageSearchedMovies(response: MoviesDisplayList.NextPage.Response){
     guard response.error == nil  else {

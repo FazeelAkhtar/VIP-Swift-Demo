@@ -37,7 +37,6 @@ class MovieListViewController : BaseViewController < MovieItemViewModel , MoveDe
     
     
    override  func viewDidLoad() {
-        
         super.viewDidLoad()
         addFooterLoadingAnimation()
         MovieListViewConfigurator.sharedInstance.configure(viewController: self)
@@ -46,13 +45,6 @@ class MovieListViewController : BaseViewController < MovieItemViewModel , MoveDe
     
     
    override  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-    
-//        let lastSectionIndex = 0
-//        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
-//        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
-//
-//        }
         updateFooterView(tableView , indexPath: indexPath)
     }
     

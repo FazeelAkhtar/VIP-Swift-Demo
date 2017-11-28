@@ -16,6 +16,13 @@ import UIKit
 
 
 
+/**
+    MovieListViewRouter   :  Router is used to pass data from view to view
+ 
+ */
+
+
+
 class MovieListViewRouter: NSObject, MovieListViewRouterLogic //, MovieListViewRouterDataPassing
 {
   var viewController: MovieListViewController?

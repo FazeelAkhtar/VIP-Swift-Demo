@@ -24,89 +24,57 @@ class MovieSearchInteractorTest: XCTestCase {
     
     
     
+    /**
+        Check Interactor Funtionality by Creating Dummy interactor , presentor and worker
+     */
+    
     func testSearchInteractorSearchFuncAndSuggestions(){
 
-        let addItemInteractorOutputSpy = MockMovieSearchPresentert()
+        let addItemInteractorOutputSpy = MockMovieSearchPresentor()
         interactor?.output = addItemInteractorOutputSpy
+        
+        
+        /**
+          Create MockApiWorker
+         */
         
         let mockApiworker = MockMovieSearchApiWorker()
         interactor?.searchApiWorker = mockApiworker
+
+        /**
+            Create mocDBWorker
+         */
+
         
         let mocDBWorker = MockDBWorker(itemStore: MovieSearchReleamService())
         interactor?.dbStore = mocDBWorker
         
+        /**
+            Create MockRequest and Load DB
+         */
+
         let request = MovieList.Suggestion.Request(type: .add(name: "Test"))
         interactor?.loadFromdummyDB(request: request)
         
-        XCTAssertTrue( mocDBWorker.isMockMockDBWorkerCalled , "Presentor Display method not called from suggestion worker" )
-        
+        XCTAssertTrue( mocDBWorker.isMockMockDBWorkerCalled , TestStrings.presentorDisplayError )
+
+        /**
+            Create Mock Interactor and Load Mock search Api
+         */
+
         interactor?.loadFromDummySearchApi(request: MovieList.Search.Request(queryText: "Dummy", page: 1))
-        XCTAssert(addItemInteractorOutputSpy.isOutPutPresenterCalled , "Presentor Display method not called from search worker")
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    class MockMovieSearchInteractor : MovieSearchInteractor {
-        
-         func loadFromDummySearchApi(request: MovieList.Search.Request){
-            searchApiWorker.getSearchedMovie(request){ [weak self] result in
-                let response = MovieList.Search.Response(searchedTxt: "dummy" , data : Data() , error : NSError() )
-                self?.output?.presentSearchResult(response)
-            }
-        }
-        
-          func loadFromdummyDB(request: MovieList.Suggestion.Request){
-                self.dbStore.executeRequest(request: request) { _ , _ in
-                    let response = MovieList.Suggestion.Response(list: [] , error: NSError() )
-                    output?.presentSavedSearchSuggestion(response)
-                }
-         }
-    }
-    
-    
-    
-    class MockMovieSearchPresentert :  MovieSearchPresenterOutputProtocol {
-        var isOutPutPresenterCalled : Bool = false
-        
-        func presentSearchResult (_ response: MovieList.Search.Response){
-            isOutPutPresenterCalled  = true
-        }
-        func presentSavedSearchSuggestion (_ response: MovieList.Suggestion.Response){
-            isOutPutPresenterCalled  = true
-        }
+        XCTAssert(addItemInteractorOutputSpy.isOutPutPresenterCalled , TestStrings.presentorDisplayError)
         
     }
     
     
-    
-
-    class MockMovieSearchApiWorker :  MovieSearchApiWorker {
-        var isMockMovieSearchApiWorkerCalled : Bool = false
-        override func getSearchedMovie(_ request : MovieList.Search.Request , callBack :  @escaping searchApiCallback ){
-            isMockMovieSearchApiWorkerCalled = true
-            callBack(MovieApiSearchResult(data: nil , error: nil ))
-        }
-    }
-    
-    
-    class MockDBWorker :  MovieDBWorker {
-        var isMockMockDBWorkerCalled : Bool = false
-       override  func executeRequest(request: MovieList.Suggestion.Request, callBack: ([MovieSuggestionViewModel], MovieSuggestionStoreError?) -> Void) {
-            isMockMockDBWorkerCalled = true
-            callBack( [] ,  nil )
-        }
-    
-    }
 }
-
+    
+    
+    
+    
+    
+    
 
 
 

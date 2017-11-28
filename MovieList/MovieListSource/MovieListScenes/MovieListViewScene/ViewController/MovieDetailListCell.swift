@@ -9,6 +9,14 @@
 import UIKit
 import Kingfisher
 
+
+/**
+    BaseMovieItemCell   :  Dynamic Cell
+    @param :   Pass Dynamic Cell Data model
+ 
+ */
+
+
 class BaseMovieItemCell <T : BaseItemModel > : UITableViewCell , ConfigurableCell  {
     var item : T?
     
@@ -52,6 +60,11 @@ class MoveDetailItemCell  : BaseMovieItemCell <MovieItemViewModel> {
 }
 
 extension MoveDetailItemCell {
+    
+    /**
+        updateImage : update image for cell
+     */
+
     
     func updateImage(){
         if let path = self.item?.imageUrl {

@@ -12,6 +12,10 @@ import UIKit
 
 
 
+/**
+    MovieListViewConfigurator   :  This will setup outputs , inputs and worker and router protocols
+ 
+ */
 
 class MovieListViewConfigurator{
     // MARK: Object lifecycle
@@ -27,15 +31,26 @@ class MovieListViewConfigurator{
     
     
     func configure(viewController: MovieListViewController){
+        
+        /**
+            MovieListViewRouter   :  For Routing to next ViewController
+         */
         let router = MovieListViewRouter()
         router.viewController = viewController
         
+        /**
+            MovieListViewPresenter   :  This will be used to get result from interactor and display result
+         */
         let presenter = MovieListViewPresenter()
         presenter.outPut = viewController
-        
+        /**
+            MovieListViewInteractor   :  This will be used to get input from User and start search and api workers calls
+         */
         let interactor = MovieListViewInteractor()
         interactor.outPut = presenter
-        
+        /**
+         MovieListViewConfigurator   :  This will setup outputs , inputs and worker and router protocols
+         */
         viewController.output = interactor
         viewController.router = router
     }

@@ -24,11 +24,19 @@ protocol MovieListPagingRequestProtocol{
 
 extension MovieListViewController :  MovieListPagingResultProtocol{
     
+    /**
+        displayNextPageSearchedItems :  Display viewmodel for results
+     */
+    
     func displayNextPageSearchedItems(viewModel:MoviesDisplayList.NextPage.ViewModel){
         self.ViewModel =  MovieListViewModel(viewModel)
         self.tableData = self.tableData + viewModel.movieList
         self.tableView.reloadData()
     }
+    
+    /**
+        displayNextPageSearchedResultError :  Display viewmodel Error
+     */
     
     func displayNextPageSearchedResultError(viewModel: MoviesDisplayList.NextPage.Response){
         UIAlertController.displayAlert(parentController: self, displayMsg: "Unable to display result.")
@@ -38,6 +46,11 @@ extension MovieListViewController :  MovieListPagingResultProtocol{
 
 
 extension MovieListViewController :MovieListPagingRequestProtocol  {
+    
+    /**
+        searchNextPageMovieItems :  Load Next Page
+     */
+    
     
     func searchNextPageMovieItems(request: MoviesDisplayList.NextPage.Request){
         output?.loadNextPage(request: request)

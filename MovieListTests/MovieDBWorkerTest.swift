@@ -11,6 +11,10 @@
 import Foundation
 import XCTest
 
+struct TestStrings {
+    static let itemNotExist = "Item not Present"
+    static let presentorDisplayError = "Presentor Display method not called from suggestion worker"
+}
 
 
 class TestMovieDBWorker : MovieDBWorker {
@@ -27,6 +31,12 @@ class TestMovieDBWorker : MovieDBWorker {
 
 class MovieDBWorkerTest: XCTestCase {
     
+    
+    /**
+        1.Create MockDB Class to manage DB Services.
+        2.Add a test item in DB
+     */
+    
     var  testDbStore = TestMovieDBWorker(itemStore: MovieSearchReleamService())
     override func setUp() {
         super.setUp()
@@ -39,21 +49,32 @@ class MovieDBWorkerTest: XCTestCase {
 extension MovieDBWorkerTest {
     
     
-    func testDBItemkCheck(){
+    /**
+        Tells DB Item is added properly in DB.
+        Check count of items added > 0
+     */
+    
+    func testDBItemCheck(){
         var resultItems  : MovieSuggestionViewModel? = nil
          realSuggestion { (result , error) in
-            guard error == nil else {  return XCTAssertNotNil(  nil , "Item not Present") }
+            guard error == nil else {  return XCTAssertNotNil(  nil , TestStrings.itemNotExist) }
             resultItems = result.first
-            XCTAssertTrue( result.count > 0 , "Item not Present")
+            XCTAssertTrue( result.count > 0 , TestStrings.itemNotExist)
         }
-            XCTAssertTrue(  resultItems != nil  , "Item not Present")
+            XCTAssertTrue(  resultItems != nil  , TestStrings.itemNotExist)
     }
     
     
+    
+    /**
+     Tells DB Item is added properly in DB.
+     Check Item Added is same name as requested
+     */
+    
     func testDbItemExist(){
         self.testDbStore.getItemWithName(id: "Test1", callback: { (result , error) in
-            guard error == nil else { return XCTAssertNotNil(  nil , "Item not Present") }
-            XCTAssertTrue( result?.title == "Test1"  , "Item is not Present")
+            guard error == nil else { return XCTAssertNotNil(  nil , TestStrings.itemNotExist) }
+            XCTAssertTrue( result?.title == "Test1"  , TestStrings.itemNotExist)
         })
       self.testDbStore.deleteItemWithName(id: "Test1")
     }

@@ -19,6 +19,11 @@ protocol MovieSearchWorker {
 
 class MovieSearchApiWorker: MovieSearchWorker {
     
+    
+    /**
+        getSearchedMovie   :   request to get Searched api and get results
+     */
+    
     func getSearchedMovie(_ request : MovieList.Search.Request , callBack :  @escaping searchApiCallback ){
         let apiWorker = MovieApiWorker()
         if let request = getSearchedRequest(request: request) {
@@ -30,6 +35,11 @@ class MovieSearchApiWorker: MovieSearchWorker {
 
 
 extension MovieSearchApiWorker {
+    
+    /**
+        getSearchedRequest   :   worker for APi Search and get URL
+     
+     */
     
      func getSearchedRequest( request : MovieList.Search.Request ) -> URLRequest? {
         let page = request.page > 0 ? request.page  :  nil

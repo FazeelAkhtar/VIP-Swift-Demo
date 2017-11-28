@@ -9,24 +9,4 @@
 import Foundation
 
 
-    
-//    enum DisplayList {
-//        struct Request {
-//            enum RequestType {
-//                case api , dataBase
-//            }
-//        }
-//        
-//        
-//        struct Response {
-//            
-//            func isSuccess() -> Bool {
-//                return false
-//            }
-//        }
-//        
-//        struct ViewModel {
-//            
-//        }
-//    }
-    
+

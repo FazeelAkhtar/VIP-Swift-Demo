@@ -19,6 +19,14 @@ protocol MovieSearchPresenterOutputProtocol // input from interactor
 class MovieSearchPresenter: MovieSearchPresenterOutputProtocol{
    var output: MovieSearchControllerInput? // output
 
+    
+    /**
+        presentSavedSearchSuggestion   :  Display Error and result from DB
+        Also convert response into ViewModel , which need to be displayed on UIView
+        @param :   MovieList.Suggestion.Response  which contains DB Queries
+     
+     */
+    
  func presentSavedSearchSuggestion (_ response: MovieList.Suggestion.Response){
 
         guard response.error == nil  else { return }
@@ -29,6 +37,14 @@ class MovieSearchPresenter: MovieSearchPresenterOutputProtocol{
         }
   }
     
+    
+    
+    /**
+     presentSearchResult   :  Display Error and result from Search Api
+     Also convert response into ViewModel , which need to be displayed on UIView
+     @param :   Search  which contains  Api Response
+     
+     */
     
     func presentSearchResult (_ response: MovieList.Search.Response){
         guard response.error == nil  else {

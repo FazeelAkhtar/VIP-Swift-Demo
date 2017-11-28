@@ -21,6 +21,12 @@ class MovieListViewInteractor {
 
 extension MovieListViewInteractor : MovieListViewProtocol {
     
+    /**
+        loadNextPage   :  Load Next Search Page
+        @param :   MoviesDisplayList.NextPage.Request which contains current page , search query 
+     
+     */
+    
     func loadNextPage(request: MoviesDisplayList.NextPage.Request){
         let worker  = MovieListViewWorker()
         let req = MovieList.Search.Request(queryText: request.queryText, page: request.page)

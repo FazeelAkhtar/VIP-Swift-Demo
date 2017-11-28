@@ -26,7 +26,7 @@ struct MovieApiSearchResult  : MovieApiResult{
 
 /**
     MovieListSearchApiService
-    Lowe level Api Calls with request and Passs As MovieApiSearchResult
+    Low level Api Calls with request and Passs As MovieApiSearchResult
  */
 
 
