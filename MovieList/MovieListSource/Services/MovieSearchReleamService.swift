@@ -82,14 +82,14 @@ class MovieSearchReleamService: MovieSuggestionStoreProtocol {
     }
     
     func createItem(item: MovieSuggestionViewModel,  completionHandler: MovieStoreErrorCallBack ) {
-        createItemInRealm(item: item.title , isUpdate: false, completionHandler: {(error) in
+        createItemInRealm(item: item.mTitle , isUpdate: false, completionHandler: {(error) in
             completionHandler(error)
         })
 
     }
     
     func updateItem(item: MovieSuggestionViewModel,  completionHandler:  MovieStoreErrorCallBack){
-            createItemInRealm(item: item.title, isUpdate: false ,completionHandler: {(error) in
+            createItemInRealm(item: item.mTitle, isUpdate: false ,completionHandler: {(error) in
                 completionHandler(error)
             })
     }

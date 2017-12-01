@@ -18,7 +18,7 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
      */
 
     
-    var output: MovieSearchProtocol?
+    var mOutput: MovieSearchProtocol?
 
     
     /**
@@ -26,24 +26,24 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
      */
 
     
-    var router: MovieSearchRouter?
+    var mRouter: MovieSearchRouter?
     
     /**
         searchedQuery :  searched Query
      */
     
-    var searchedQuery : String?
+    var mSearchedQuery : String?
     
     
     /**
         isAlreadySearching :  to stop multiple searching if in progress
      */
     
-    var isAlreadySearching : Bool = false
+    var mIsAlreadySearching : Bool = false
     
 
     
-    private lazy var searchBar : UISearchBar = {
+    private lazy var mSearchBar : UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.searchBarStyle = UISearchBarStyle.prominent
         searchBar.placeholder = " Search..."
@@ -60,7 +60,7 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.tableData = []
+        self.mTableData = []
         
     }
     
@@ -71,13 +71,13 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
     
     init( with  tableData :  [Any]) {
         super.init()
-        self.tableData = tableData
+        self.mTableData = tableData
     }
     
     
     override  func viewDidLoad() {
         super.viewDidLoad()
-        self.searchBar.text = ""
+        self.mSearchBar.text = ""
         MovieSearchViewConfigurator.sharedInstance.configure(viewController: self) //configure output/input
     }
     
@@ -91,10 +91,10 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
      */
     
    override   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard self.tableData.count >= indexPath.row else { return }
-        if let searchSuggestion  = self.tableData[indexPath.row] as? MovieSuggestionViewModel {
-            searchedQuery  = nil
-            self.executeSearchQuery(request: MovieList.Search.Request(queryText: searchSuggestion.title , page: 0) )
+        guard self.mTableData.count >= indexPath.row else { return }
+        if let searchSuggestion  = self.mTableData[indexPath.row] as? MovieSuggestionViewModel {
+            mSearchedQuery  = nil
+            self.executeSearchQuery(request: MovieList.Search.Request(queryText: searchSuggestion.mTitle , page: 0) )
         }
     }
     
@@ -107,8 +107,8 @@ class MovieSearchViewController   : BaseViewController < MovieSuggestionViewMode
   
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text  else {return }
-        guard !isAlreadySearching else { return }
-        searchedQuery  = text
+        guard !mIsAlreadySearching else { return }
+        mSearchedQuery  = text
         self.executeSearchQuery(request: MovieList.Search.Request(queryText: text, page: 0) )
     }
     

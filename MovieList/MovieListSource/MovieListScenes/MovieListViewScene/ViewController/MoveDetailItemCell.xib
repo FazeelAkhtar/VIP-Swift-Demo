@@ -73,10 +73,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="authorAvatar" destination="BHF-pl-biK" id="FLY-T9-re6"/>
-                <outlet property="movieName" destination="kEq-Ip-6Pu" id="xyo-Ii-rtk"/>
-                <outlet property="plainTitle" destination="zh3-rB-MNb" id="M9x-A9-9c1"/>
-                <outlet property="releaseData" destination="Tl4-9b-1gW" id="cb8-TI-gq6"/>
+                <outlet property="mAuthorAvatar" destination="BHF-pl-biK" id="T8Y-oO-sxS"/>
+                <outlet property="mMovieName" destination="kEq-Ip-6Pu" id="N5S-0t-PYe"/>
+                <outlet property="mPlainTitle" destination="zh3-rB-MNb" id="vTC-q6-ghU"/>
+                <outlet property="mReleaseDate" destination="Tl4-9b-1gW" id="1kV-hI-OFw"/>
             </connections>
         </tableViewCell>
     </objects>

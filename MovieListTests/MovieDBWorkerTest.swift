@@ -74,7 +74,7 @@ extension MovieDBWorkerTest {
     func testDbItemExist(){
         self.testDbStore.getItemWithName(id: "Test1", callback: { (result , error) in
             guard error == nil else { return XCTAssertNotNil(  nil , TestStrings.itemNotExist) }
-            XCTAssertTrue( result?.title == "Test1"  , TestStrings.itemNotExist)
+            XCTAssertTrue( result?.mTitle == "Test1"  , TestStrings.itemNotExist)
         })
       self.testDbStore.deleteItemWithName(id: "Test1")
     }

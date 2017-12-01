@@ -30,7 +30,7 @@ class MovieListViewController : BaseViewController < MovieItemViewModel , MoveDe
      init( with  viewModel  : MovieListViewModel ) {
         super.init()
         self.ViewModel = viewModel
-        tableData = viewModel.movieList
+        mTableData = viewModel.mMovieList
     }
     
     
@@ -59,7 +59,7 @@ extension MovieListViewController {
     
    private var isPageAvailble : Bool {
         if let viewModel = self.ViewModel {
-            return viewModel.currentPage < viewModel.totalPages
+            return viewModel.mCurrentPage < viewModel.mTotalPages
         }
         return  false
     }
@@ -69,8 +69,8 @@ extension MovieListViewController {
         if  indexPath.row == lastRowIndex {
             tableView.tableFooterView?.isHidden  = !isPageAvailble
             
-            if let queryTxt = ViewModel?.searchedTxt , let page =  ViewModel?.currentPage  {
-                guard page <= ViewModel?.totalPages ?? 0  else { return }
+            if let queryTxt = ViewModel?.mSearchedTxt , let page =  ViewModel?.mCurrentPage  {
+                guard page <= ViewModel?.mTotalPages ?? 0  else { return }
                 let req = MoviesDisplayList.NextPage.Request(queryText:  queryTxt , page: page+1)
                 self.searchNextPageMovieItems(request:  req)
             }

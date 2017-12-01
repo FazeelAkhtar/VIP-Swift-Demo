@@ -19,7 +19,7 @@ import UIKit
 protocol ReusableCellHosting {
     
     func register<T>(cell: T.Type) where T: UITableViewCell  // Register Nib UItableviewcell
-    func dequeueReusableCell<T: ReusableCell>(with cell: T.Type) -> T? //get deque generic UITableviewcell
+    func dequeueReusableCell<T: ReusableCell>(with cell: T.Type) -> T? //get dequeue generic UITableviewcell
     
 }
 

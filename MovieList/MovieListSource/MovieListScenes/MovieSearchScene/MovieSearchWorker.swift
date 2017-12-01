@@ -44,7 +44,6 @@ extension MovieSearchApiWorker {
      func getSearchedRequest( request : MovieList.Search.Request ) -> URLRequest? {
         let page = request.page > 0 ? request.page  :  nil
         if  let urlString = MovieSearchURLManager.Api(queryText: request.queryText, page: page).getUrl().addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
-        
             if let url = URL(string: urlString){
                 return URLRequest(url: url)
             }

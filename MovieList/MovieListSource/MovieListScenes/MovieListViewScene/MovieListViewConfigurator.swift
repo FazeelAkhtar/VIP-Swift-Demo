@@ -42,12 +42,12 @@ class MovieListViewConfigurator{
             MovieListViewPresenter   :  This will be used to get result from interactor and display result
          */
         let presenter = MovieListViewPresenter()
-        presenter.outPut = viewController
+        presenter.mOutPut = viewController
         /**
             MovieListViewInteractor   :  This will be used to get input from User and start search and api workers calls
          */
         let interactor = MovieListViewInteractor()
-        interactor.outPut = presenter
+        interactor.mOutPut = presenter
         /**
          MovieListViewConfigurator   :  This will setup outputs , inputs and worker and router protocols
          */

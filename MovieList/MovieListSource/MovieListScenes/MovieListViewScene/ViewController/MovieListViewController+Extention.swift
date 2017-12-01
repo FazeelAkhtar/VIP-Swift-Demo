@@ -30,7 +30,7 @@ extension MovieListViewController :  MovieListPagingResultProtocol{
     
     func displayNextPageSearchedItems(viewModel:MoviesDisplayList.NextPage.ViewModel){
         self.ViewModel =  MovieListViewModel(viewModel)
-        self.tableData = self.tableData + viewModel.movieList
+        self.mTableData = self.mTableData + viewModel.movieList
         self.tableView.reloadData()
     }
     

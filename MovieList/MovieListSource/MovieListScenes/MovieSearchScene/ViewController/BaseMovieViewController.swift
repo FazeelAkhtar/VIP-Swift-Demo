@@ -11,9 +11,22 @@ import  Cartography
 
 class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewController , UITableViewDelegate , UITableViewDataSource{
     
-    var tableData :  Array<Any>
+    /**
+        Generic Type Table Data for display Cells
+     */
+    var mTableData :  Array<Any>
+    
+    
+    /**
+        Generic Type Table ViewCell Type
+     */
     
     typealias mCell = Cell
+    
+    
+    /**
+     Lazy Table View with Generic Type Table ViewCell Type
+     */
     
     
     lazy var tableView : UITableView = {
@@ -27,14 +40,20 @@ class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewContr
     
     
     
+    /**
+        REQUIRED initializer
+     */
+    
+    
     required init?(coder: NSCoder) {
-        tableData = []
+        mTableData = []
         super.init(coder: coder)
     }
     
     
+    
     init() {
-        tableData = []
+        mTableData = []
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -69,7 +88,7 @@ class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewContr
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableData.count
+        return self.mTableData.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,7 +98,7 @@ class BaseViewController <  T , Cell :  BaseMovieItemCell < T > >  : UIViewContr
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(with: mCell.self) {
-            if  let model = self.tableData[indexPath.row] as?  mCell.T {
+            if  let model = self.mTableData[indexPath.row] as?  mCell.T {
                 cell.configure(model , at: indexPath)
             }
             return cell

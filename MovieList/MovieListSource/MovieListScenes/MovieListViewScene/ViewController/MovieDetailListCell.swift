@@ -18,10 +18,10 @@ import Kingfisher
 
 
 class BaseMovieItemCell <T : BaseItemModel > : UITableViewCell , ConfigurableCell  {
-    var item : T?
+    var mItem : T?
     
     func configure(_ model: T , at indexPath: IndexPath) {
-        self.item = model
+        mItem = model
     }
     
 }
@@ -29,11 +29,11 @@ class BaseMovieItemCell <T : BaseItemModel > : UITableViewCell , ConfigurableCel
 
 class MovieSearchCell : BaseMovieItemCell<MovieSuggestionViewModel>   {
 
-    @IBOutlet weak var movieName            : UILabel!
+    @IBOutlet weak var mMovieName            : UILabel!
     
     override  func configure(_ model: T , at indexPath: IndexPath) {
-        self.item = model
-        movieName.text = self.item?.title
+        mItem = model
+        mMovieName.text = model.mTitle
     }
     
 }
@@ -43,17 +43,17 @@ class MovieSearchCell : BaseMovieItemCell<MovieSuggestionViewModel>   {
 class MoveDetailItemCell  : BaseMovieItemCell <MovieItemViewModel> {
     
     
-    @IBOutlet weak var authorAvatar         : UIImageView!
-    @IBOutlet weak var movieName            : UILabel!
-    @IBOutlet weak var releaseData          : UILabel!
-    @IBOutlet weak var plainTitle           : UILabel!
+    @IBOutlet weak var mAuthorAvatar         : UIImageView!
+    @IBOutlet weak var mMovieName            : UILabel!
+    @IBOutlet weak var mReleaseDate          : UILabel!
+    @IBOutlet weak var mPlainTitle           : UILabel!
     
     
     override func configure(_ model: T , at indexPath: IndexPath) {
-        self.item = model
-        self.movieName.text         =   model.title
-        self.releaseData.text       =   model.releaseData
-        self.plainTitle.text        =    model.detailText
+        mItem = model
+        mMovieName.text         =   model.mTitle
+        mReleaseDate.text       =   model.mReleaseData
+        mPlainTitle.text        =    model.mDetailText
         updateImage()
     }
     
@@ -67,10 +67,10 @@ extension MoveDetailItemCell {
 
     
     func updateImage(){
-        if let path = self.item?.imageUrl {
+        if let path = self.mItem?.mImageUrl {
             let completePath = MovieSearchURLManager.Image(imagePath: path).getUrl()
             let url = URL(string: completePath)
-            self.authorAvatar.kf.setImage(with: url)
+            self.mAuthorAvatar.kf.setImage(with: url)
         }
     }
 }

@@ -15,7 +15,7 @@ protocol MovieListViewProtocol
 
 
 class MovieListViewInteractor {
-  var outPut : MovieListPresenterProtocol?
+  var mOutPut : MovieListPresenterProtocol?
   
 }
 
@@ -32,7 +32,7 @@ extension MovieListViewInteractor : MovieListViewProtocol {
         let req = MovieList.Search.Request(queryText: request.queryText, page: request.page)
         worker.getSearchedMovie(req){ [weak self] result in
             let response = MoviesDisplayList.NextPage.Response(searchedTxt: request.queryText , data : result.data , error : result.error )
-            self?.outPut?.displayNextPageSearchedMovies(response: response)
+            self?.mOutPut?.displayNextPageSearchedMovies(response: response)
         }
 
     }

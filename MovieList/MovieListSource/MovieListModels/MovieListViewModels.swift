@@ -12,16 +12,16 @@ import Foundation
 
 //protocol BaseViewModel {
 protocol BaseItemModel  {
-    var title: String { get }
+    var mTitle: String { get }
 }
 
 
 
 struct MovieSuggestionViewModel : BaseItemModel {
     
-    let title: String
+    let mTitle: String
     init(_ title : String) {
-        self.title = title
+        self.mTitle = title
     }
 }
 
@@ -33,9 +33,9 @@ struct MovieSuggestionViewModel : BaseItemModel {
 
 protocol MovieItemModel : BaseItemModel {
     
-    var releaseData: String { get }
-    var detailText: String { get }
-    var imageUrl: String { get }
+    var mReleaseData: String { get }
+    var mDetailText: String { get }
+    var mImageUrl: String { get }
     
 }
 
@@ -50,16 +50,16 @@ protocol MovieItemModel : BaseItemModel {
 
 struct MovieItemViewModel : MovieItemModel  {
     
-    let title: String
-    let releaseData: String
-    let detailText: String
-    let imageUrl: String
+    let mTitle: String
+    let mReleaseData: String
+    let mDetailText: String
+    let mImageUrl: String
     
     init(_ item : ApiMovieItemModel) {
-        detailText   = item.overview ?? ""
-        imageUrl     = item.poster_path ?? ""
-        releaseData  = item.release_date ?? ""
-        title        = item.title ?? ""
+        mDetailText   = item.overview ?? ""
+        mImageUrl     = item.poster_path ?? ""
+        mReleaseData  = item.release_date ?? ""
+        mTitle        = item.title ?? ""
     }
 }
 
@@ -74,29 +74,29 @@ struct MovieItemViewModel : MovieItemModel  {
 
 struct MovieListViewModel {
   
-    let currentPage : Int
-    let totalPages  : Int
-    let movieList :  [MovieItemViewModel]
-    var searchedTxt : String?
+    let mCurrentPage : Int
+    let mTotalPages  : Int
+    let mMovieList :  [MovieItemViewModel]
+    var mSearchedTxt : String?
     
     init(_ item : ApiMoviesModel) {
-        currentPage =  item.page
-        totalPages  =  item.total_pages
-        movieList     = item.results.map{ return MovieItemViewModel($0) }
+        mCurrentPage =  item.page
+        mTotalPages  =  item.total_pages
+        mMovieList     = item.results.map{ return MovieItemViewModel($0) }
     }
     
     init(_ viewModel : MovieList.Search.ViewModel) {
-        currentPage =  viewModel.currentPage
-        totalPages  =  viewModel.totalPages
-        movieList     = viewModel.movieList
-        searchedTxt  = viewModel.searchedText
+        mCurrentPage =  viewModel.currentPage
+        mTotalPages  =  viewModel.totalPages
+        mMovieList     = viewModel.movieList
+        mSearchedTxt  = viewModel.searchedText
     }
     
     
     init(_ newModel : MoviesDisplayList.NextPage.ViewModel) {
-        searchedTxt = newModel.searchedText
-        currentPage =  newModel.currentPage
-        totalPages  =  newModel.totalPages
-        movieList   = newModel.movieList
+        mSearchedTxt = newModel.searchedText
+        mCurrentPage =  newModel.currentPage
+        mTotalPages  =  newModel.totalPages
+        mMovieList   = newModel.movieList
     }
 }

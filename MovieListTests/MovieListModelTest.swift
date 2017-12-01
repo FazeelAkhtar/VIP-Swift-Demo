@@ -32,9 +32,6 @@ extension MovieListTests {
     func testMovieListModel_Nil (){
         XCTAssertNotNil( movieListModel , "Movies List Json is not correct")
     }
-
-    
-  
     
     func testMovieListModel_Page_Pass (){
         XCTAssertTrue( movieListModel?.page == 3 , "Movies List Page is not correct")

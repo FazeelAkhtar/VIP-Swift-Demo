@@ -22,41 +22,72 @@ protocol MovieSearchControllerOutput{
     func executeSuggestionRequest(request: MovieList.Suggestion.Request)
 }
 
-extension MovieSearchViewController : MovieSearchControllerOutput {
+
+
+/**
+    MovieSearchControllerInput delegate Call backs :
+    Called when Presentor will call to udpate ViewController with Search Result , Suggestion and Error
+ */
+
+extension MovieSearchViewController : MovieSearchControllerInput {
+
+    
+    /**
+        displaySearchedItems :
+        Called when Presentor will call to udpate ViewController with Search Result
+     */
     
     func displaySearchedItems(viewModel:MovieList.Search.ViewModel){
         if viewModel.movieList.count > 0 {
-            router?.routeToSearchListView(viewModel: viewModel)
-            if let searchText = self.searchedQuery{
+            mRouter?.routeToSearchListView(viewModel: viewModel)
+            if let searchText = self.mSearchedQuery{
                 self.executeSuggestionRequest(request: MovieList.Suggestion.Request(type: .add(name: searchText)) )
             }
         }else{
             UIAlertController.displayAlert(parentController: self, displayMsg: "No Search result found")
         }
-        isAlreadySearching = false
+        mIsAlreadySearching = false
     }
     
+    
+    /**
+     displaySuggestions:
+     Called when Presentor will call to udpate ViewController with  DB  Search Suggestions
+     */
+    
     func displaySuggestions(viewModel: MovieList.Suggestion.ViewModel){
-        self.tableData = viewModel.list
+        self.mTableData = viewModel.list
         self.tableView.reloadData()
     }
     
+    
+    /**
+     displaySearchedResultError:
+     Called when Presentor will call to udpate ViewController with  Error
+     */
+    
     func displaySearchedResultError(viewModel: MovieList.Search.Response){
-        isAlreadySearching = false
+        mIsAlreadySearching = false
         UIAlertController.displayAlert(parentController: self, displayMsg: "Unable to display result.Please try again")
     }
 }
 
 
-extension MovieSearchViewController : MovieSearchControllerInput {
+/**
+ MovieSearchControllerOutput delegate Call backs :
+ Called when interactor  will call to Execute  Search Api , Suggestion from Db
+ */
+
+
+extension MovieSearchViewController : MovieSearchControllerOutput {
     
     func executeSearchQuery(request: MovieList.Search.Request){
-        isAlreadySearching = true
-        output?.loadFromSearchApi(request:  request)
+        mIsAlreadySearching = true
+        mOutput?.loadFromSearchApi(request:  request)
     }
     
     func executeSuggestionRequest(request: MovieList.Suggestion.Request){
-        output?.loadFromDB(request: request)
+        mOutput?.loadFromDB(request: request)
     }
     
 }

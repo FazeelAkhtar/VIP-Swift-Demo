@@ -17,7 +17,7 @@ protocol MovieListPresenterProtocol
 
 class MovieListViewPresenter: MovieListPresenterProtocol
 {
-   var outPut: MovieListPagingResultProtocol?
+   var mOutPut: MovieListPagingResultProtocol?
   
     /**
         displayNextPageSearchedMovies   :  Display Error and result from Next Page loading
@@ -29,16 +29,16 @@ class MovieListViewPresenter: MovieListPresenterProtocol
   
   func displayNextPageSearchedMovies(response: MoviesDisplayList.NextPage.Response){
     guard response.error == nil  else {
-        outPut?.displayNextPageSearchedResultError(viewModel: response) ; return
+        mOutPut?.displayNextPageSearchedResultError(viewModel: response) ; return
     }
     
     if let apiModel = response.getResponseModel(){
         if let searchedTxt  = response.searchedTxt{
             let viewModel = MoviesDisplayList.NextPage.ViewModel(apiModel , txt : searchedTxt)
-            outPut?.displayNextPageSearchedItems(viewModel: viewModel)
+            mOutPut?.displayNextPageSearchedItems(viewModel: viewModel)
         }
     }else{
-        outPut?.displayNextPageSearchedResultError(viewModel: response) ; return
+        mOutPut?.displayNextPageSearchedResultError(viewModel: response) ; return
     }
   }
 }

@@ -38,7 +38,7 @@ class MovieSearchViewConfigurator{
         let interactor = MovieSearchInteractor()
         interactor.output = presenter
         
-        viewController.output = interactor
-        viewController.router = router
+        viewController.mOutput = interactor
+        viewController.mRouter = router
     }
 }
