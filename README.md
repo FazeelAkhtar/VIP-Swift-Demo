@@ -1,4 +1,4 @@
-# MovieList
+# VIP-Swift-Demo
 
 Idea is to show how i will use a better iOS pattern to solve  problem in as less time as possible.
 Code is done using Clean Swift architecture and TDD
